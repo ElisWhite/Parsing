@@ -7,3 +7,5 @@ class Cafe(models.Model):
     adress = models.CharField(max_length=250)
     info = models.TextField()
     link = models.URLField()
+  
+ #Add to GitHub
