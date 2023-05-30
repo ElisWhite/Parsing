@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cafe_style.css'%}">
+    <title>{{c.name}}</title>
+</head>
+<body>
+<div class="content">
+<h1>{{cafe.name}}</h1>
+<p class="_img"> <img class="image" src="{{cafe.img}}"></p>
+{%for i in cafe.info %}
+
+    <p class="text">{{i}}</p>
+
+{%endfor%}
+</div>
+</body>
+</html>

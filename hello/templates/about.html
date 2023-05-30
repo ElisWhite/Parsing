@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{header}}</h1>
+<p>Name: {{user.name}}, Age: {{user.age}}</p>
+<p> Address: st. {{address.0}}, h. {{address.1}}, f. {{address.2}}</p>
+<p>Language: {{langs.0}}, {{langs.1}}, {{langs.2}}</p>
+{{user.age}}
+
+{% for user in users%}
+    <div>
+        {{user.id}}
+        {{user.name}}
+        {{user.age}}
+        {{user.email}}
+
+    </div>
+
+{% endfor %}
+
+
+</body>
+</html>

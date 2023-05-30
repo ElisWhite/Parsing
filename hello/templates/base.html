@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Default title {%endblock title%}</title>
+    <link rel='stylesheet' href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <div> <a href="/"> Home</a> | <a href="/hello/contact">Contacts</a></div>
+<h1>{%block header%} {%endblock header%}</h1>
+<div>{%block content%}{%endblock content%}</div>
+<div>{%block footer%} MyCorp. 2023/ {%endblock footer%}</div>
+
+</body>
+</html>

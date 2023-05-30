@@ -1,0 +1,12 @@
+body{
+    background-color: #f8f66f;
+    font-size: 20pt;
+}
+img{
+    width: 400px;
+    height: 400px;
+
+}
+.alert{color: red}
+.form-group{margin: 10px 0;}
+

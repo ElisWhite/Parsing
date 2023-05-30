@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{%load static %}
+{%block title %} Index {%endblock title %}
+{% block header%} Index {%endblock header %}
+{%block content%}
+
+<img src="{%static 'images/img.jpg' %}">
+<form method="POST">
+    {% csrf_token %}
+<table>
+    {{form}}
+</table>
+    <ul>
+        {{form.as_ul}}
+    </ul>
+    <div>
+        {{ form.as_p }}
+    </div>
+    <input type="submit" value="Send">
+</form>
+
+{%endblock content%}
+<!--<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel='stylesheet' href="{% static 'css/cafe_style.css' %}">
+</head>
+<body>
+
+<h2 align="center">{{header}}</h2>
+<p>{{message}}</p>
+{{body}}
+{% autoescape off%}
+    {{body}}
+{% endautoescape %}
+
+{% comment %}
+    sdfsfsdf
+{% endcomment %}
+
+{% if n > 5 %}
+    <p>Password OK</p>
+{% elif n <= 5 %}
+    <p>Password bad</p>
+{% else %}
+    <p> Password wrong</p>
+{% endif %}
+<ul>
+    {% for element in langs %}
+        <li>{{ element }}</li>
+    {% empty %}
+        <li>Langs array is empty</li>
+    {% endfor %}
+</ul>
+
+{% for key, value in user.items %}
+<p>{{key}}: {{value}}</p>
+{% endfor %}
+
+{% with name="Tom" age=34 %}
+   {{name}}
+{% endwith %}
+
+{% now "N, j, Y P" %}
+<img src="{%static 'images/img.jpg' %}">
+</body>
+</html>
+-->

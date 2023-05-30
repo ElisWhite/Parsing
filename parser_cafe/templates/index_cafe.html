@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cafe_style.css'%}">
+    <meta charset="UTF-8">
+    <title>Parser</title>
+</head>
+<body>
+<div class="content">
+    {%block content%}
+      {% for c in cafe%}
+    <div class="blocks">
+        <a class="link" href="cafe/{{c.link}}">{{c.name}}</a>
+        <div class="block1">
+            <img src={{c.img}}>
+        </div>
+
+        <div class="block2">
+            <p class="info">{{c.info}}</p>
+            <p class="adress">{{c.adress}}</p>
+        </div>
+    </div>
+     {%endfor%}
+    {%endblock content%}
+
+
+
+
+
+</div>
+</body>
+</html>

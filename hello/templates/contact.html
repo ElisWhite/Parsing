@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{%load static %}
+{%block title %} Index {%endblock title %}
+{% block header%} Index {%endblock header %}
+{%block content%}
+
+<form method="POST">
+    {% csrf_token %}
+<table>
+    {{form}}
+
+</table>
+    <input type="submit" value="Send">
+</form>
+{{user.name}}
+{%endblock content%}

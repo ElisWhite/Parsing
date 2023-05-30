@@ -1,0 +1,22 @@
+
+{%extends "base.html"%}
+{%block title%} Schedule {%endblock title%}
+
+
+{%block content%}
+
+    <h2>Розклад уроків</h2>
+    <table border="3px">
+        {% for day, lesson in lessons.items %}
+            <tr><th align="center"> {{day}} </th>
+
+
+             {% for les in lesson %}
+
+                 <td style="font-size: 15pt;"> {{ les}}</td>
+                {% endfor %}</tr>
+
+    {% endfor %}
+    </table>
+
+{%endblock content%}
